@@ -19,8 +19,8 @@ train_score = regr.score(X_train, y_train) * 100
 test_score = regr.score(X_test, y_test) * 100
 
 with open("metrics.txt", 'w') as outfile:
-  outfile.write(Training variance explained: %2.1f%%\n" % train_score)
-  outfile.write(Test variance explained: %2.1f%%\n" % test_score)
+  outfile.write("Training variance explained: %2.1f%%\n" % train_score)
+  outfile.write("Test variance explained: %2.1f%%\n" % test_score)
                 
 importances = regr.feature_importances_
 labels = df.columns
