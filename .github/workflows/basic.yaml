@@ -10,5 +10,8 @@ jobs:
         env:
           repo_token: ${{ secrets.GOTHUB_TOKENS }}
         run: |
-          pip install requirements.txt
+          pip install -r requirements.txt
           python train.py
+          
+          echo "MODEL METRICS"
+          cat metrics.txt
